@@ -1,25 +1,94 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Button from './Button';
+import Product from './Product';
 
-function App() {
+// const App = () => {
+//     console.log('button clicked');
+
+//     const newLocal = 'http://89.111.141.36:8000/web-data';
+
+//   const handleClick = () => {
+
+//     const data = {
+//       products: 'apple',
+//       totalPrice: '150',
+//   }
+
+//     fetch(newLocal , {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(data)
+//     })   
+//   }
+
+//   return (
+//     <div>
+//       <button onClick={handleClick}>Click</button>
+//     </div>
+//   );
+// };
+
+
+// export default App;
+
+
+const App = () => {
+  const newLocal = 'http://89.111.141.36:8000/web-data';
+  const handleClick = () => {
+    console.log('button clicked');
+      const data = {
+      products: 'apple',
+      totalPrice: '150',
+  }
+
+    fetch(newLocal , {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })   
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={handleClick}>Click</button>
     </div>
   );
-}
+};
 
 export default App;
+
+// function App() {
+//   const newLocal = 'https://89.111.141.36:8000/web-data';
+
+  // const handleClick = () => {
+
+  //   const data = {
+  //     products: 'apple',
+  //     totalPrice: '150',
+  // }
+
+  //   fetch(newLocal , {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(data)
+  //   })   
+  // }
+
+
+//   return (
+//     <div className="App">
+//       <Product />
+//       <Button onClick={handleClick}/>
+//     </div>
+//   );
+// }
+
+// export default App;
